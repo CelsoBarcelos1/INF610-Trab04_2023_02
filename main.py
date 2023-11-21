@@ -73,15 +73,15 @@ def main():
     for i in range(0, len(S)):  # Calculate S'
         S1.append(round(2 * (S[i] / Sum), 2))
         count2 += 1  # Count how many times the Basic Operation was executed
-    print('New set S\' = 2*S/sum(S)) = ', S1, end='')
-    print('. The Basic Operation (CALCULATE S\') was executed %d times!' % count2)
+    print('New set S\' = 2*S/sum(S)) = ', S1)
+    print('The Basic Operation (CALCULATE S\') was executed %d times!' % count2)
 
     # -------> Step 2) Solution A(Qi) -> Qo
     print('\n========================================')
     print('Step 2) Solution A(Qi) -> Qo | Bin-Packing Calculation!')
     solution = solver.bin_packing(S1, bin_capacity)
 
-    print('\nGiven the provided set, there are %d bins with C = %d.' % (len(solution), bin_capacity))
+    print('Given the provided set, there are %d bins with C = %d.' % (len(solution), bin_capacity))
     print('\nThe bins found in the provided list are:')
     for i in solution:
         print(i)
